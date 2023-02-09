@@ -20,7 +20,7 @@ public class RickAndMortyController {
         return service.getAllRickAndMortyCharacters();
     }
 
-    @GetMapping("/character/{filter}/{attribute}")
+    @GetMapping("/character/{filter}/{attribute}") // alternative change it to request params so the style is better
     public List<RickAndMortyCharacter> getFilteredCharacters(@PathVariable String filter, @PathVariable String attribute) {
         return service.getFilteredCharacters(filter, attribute);
     }
